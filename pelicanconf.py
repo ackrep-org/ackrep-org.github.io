@@ -45,7 +45,7 @@ THEME = 'themes/ackrep-standard'
 OUTPUT_PATH = 'docs/'
 
 # these paths are relative to /content
-STATIC_PATHS = ["downloads", "img"]
+STATIC_PATHS = ["downloads", "img", "res/CNAME"]
 
 JINJA_GLOBALS = {
 "BUILD_TIME": datetime.utcnow()
@@ -70,3 +70,10 @@ TAGS_SAVE_AS = ""
 ARCHIVES_SAVE_AS = ""
 AUTHORS_SAVE_AS = ""
 CATEGORIES_SAVE_AS = ""
+
+
+
+
+EXTRA_PATH_METADATA = {
+                        'res/CNAME': {'path': 'CNAME'},
+                      }
