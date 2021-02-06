@@ -1,9 +1,9 @@
-# ackrep-org.github.io
+# General information
 
 This repo contains the sources (markdown-content, themes, download files), and the built result of the ackrep landing page.
 
 
-The rendered page is available at: <https://ackrep-org.github.io> and <http://ackrep.org> (https certificate yet in progress).
+The rendered page is available at: <https://ackrep-org.github.io> and <https://ackrep.org>.
 
 
 ## How to built
@@ -27,3 +27,11 @@ The rendered page is available at: <https://ackrep-org.github.io> and <http://ac
 - `git add doc/`
 - `git commit -m "publication"`
 - `git push origin`
+
+
+# Relevant docs:
+
+
+- https://docs.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites
+- https://docs.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site
+- https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
