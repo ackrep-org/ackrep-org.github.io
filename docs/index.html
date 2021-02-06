@@ -1,1 +1,98 @@
-This works as expected (but is not ready yet).
+<!DOCTYPE html>
+<html><head lang="en">
+
+<!-- this template was orignially based on https://github.com/fsfw-dresden/ldap-dingens -->
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="https://ackrep-org.github.io/theme/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://ackrep-org.github.io/theme/css/style.css">
+
+    <link rel="icon" type="image/png"       href="https://ackrep-org.github.io/theme//img/favicon.png">
+
+
+    <title>Index &ndash; ACKREP – Automatic Control Knowledge Repository</title>
+</head>
+<body>
+<script>0</script> <!--prevent flash of unstyled content-->
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+        <h1><a href="/">Automatic Control Knowledge Repository – ACKREP</a></h1>
+
+<!-- block content-->
+<h1 id="overview">Overview</h1>
+<p>Traditionally, human knowledge is represented mainly in form of written natural language, symbolic formulas and pictures. The project <code>ACKREP</code> aims to supplement these representation forms with additional formal (i.e. machine interpretable) representations. The scope of this project is <em>control theory</em> and <em>control engineering</em> (subsumed under "automatic control").</p>
+<p>This discipline is characterized by a wide range of application fields from different physical domains, an by a heterogeneous methodical landscape from different areas of mathematics, engineering and computer science.</p>
+<p>Basically, ACKREP is motivated to <strong>facilitate knowledge transfer</strong> both</p>
+<ul>
+<li>within the discipline of automatic control (i.e. within subdisciplines), as well as</li>
+<li>with areas of potential application (e.g. mechanical engineering, chemical process engineering, etc.).</li>
+</ul>
+<p>How to best achieve theses goals is an open question and subject to ongoing research.</p>
+<h1 id="subprojects">Subprojects</h1>
+<p><strong>Important notice:</strong> Our current attempts of formal knowledge representation are still very experimental. We highly encourage anybody interested in this topic to contact the <a href="#team">ackrep-team</a> with feedback or contribution ideas.</p>
+<h2 id="ackrep-code">ACKREP Code</h2>
+<p>Large part of control knowledge is of algorithmic type and is available as executable code, e.g. feedback design, trajectory planning, observability checking etc. However, often this code is not published or at least hard to execute on different environments. This clearly hinders <strong>reproducibility</strong> and thus knowledge transfer. Therefore in [1.1] we propose <em>ACKREP Code</em> (originally just named "ACKRep"): A git repository which holds control-related code in a special structure (<em>problems</em>, <em>solutions</em>, <em>methods</em>, <em>environment specifications</em>, ...) plus a webservice which checks the solution-entities against the problem-entities, i.e. a specialized continuous integration service.</p>
+<p>References:</p>
+<ul>
+<li>[1.1] Carsten Knoll und Robert Heedt: <em>„‚Automatic Control Knowledge Repository‘ – A Computational Approach for Simpler and More Robust Reproducibility of Results in Control Theory“</em>. In:
+24th International Conference on System Theory, Control and Computing (ICSTCC). 2020, P. 130–136. <a href="downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__preprint.pdf">Fulltext of Preprint</a></li>
+<li>[1.2] Conference Presentation: <a href="img/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__summary.png">One-Page-Summary</a> | <a href="downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__slides.pdf">PDF-Slides</a> | <a href="downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__talk-video.mp4">Video</a></li>
+<li>[1.3] Demo instance: <a href="https://testing.ackrep.org">https://testing.ackrep.org</a></li>
+</ul>
+<h2 id="method-net">Method Net</h2>
+<p>In [2.1] we propose the <em>Method Net</em>, a supplement to classical knowledge representation, consisting of types and methods in a graph structure.
+From that, a schematic solution procedure can be generated for a specific problem.
+"Trajectory tracking control for a triple pendulum" is used to demonstrate how the proposed method supports knowledge transfer.
+Furthermore, an OWL-<strong>ontology</strong> is automatically generated from the methodnet which allows to access this knowledge base with <strong>SPARQL</strong> and other semantic methods.</p>
+<p>Note: Currently information about this project is only available in German.</p>
+<p>References:</p>
+<ul>
+<li>[2.1] Robert Heedt, Carsten Knoll, Klaus Röbenack: <em>„Formal Semantic Representation of Methods in Automatic Control“</em>, Submitted to VDI Mechatronik-Tagung, 2021, (German). <a href="downloads/2021_Heed_Knoll_Roebenack__VDI_Mechatronik__Formale_semantische_Repraesentation_regelungstechnischer_Methoden_preprint.pdf">Fulltext of Preprint</a></li>
+<li>[2.2] Demo instance: <a href="https://methodnet.ackrep.org">https://methodnet.ackrep.org</a></li>
+</ul>
+<h1 id="team">Team</h1>
+<ul>
+<li><a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/carsten-knoll">Carsten Knoll</a></li>
+<li><a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/robert-heedt">Robert Heedt</a></li>
+</ul>
+<!-- /block content-->
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+
+<div class="container">
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<!-- include footer-->
+
+
+
+<hr class="hr_style_gradient opacity30">
+<div class="box_base box_footer">
+
+    <div class="box_footer_text modest_links">
+    This web site was automatically generated with  <a href="https://getpelican.com/">Pelican</a> on 2021-02-06 14:29:50 (UTC).
+
+    </div>
+
+    <div class="footer_link_menu">
+
+    <a href="https://tu-dresden.de/impressum">Legal Notice</a> |
+    <a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/carsten-knoll">Contact</a>
+    </div>
+</div>
+<br><!-- / include footer-->
+    </div>
+</div>
+</div>
+</footer>
+
+</body></html>
