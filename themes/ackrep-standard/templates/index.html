@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Alle Blogartikel &ndash; {{ super() }}{% endblock %}
+{% block content %}
+<section id="blogposts">
+  <h1>Alle Blogartikel</h1>
+  <ol id="post-list">
+    {% for article in dates_page.object_list %}
+    <li style="margin-bottom:4em;"><article class="hentry">
+      <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
+        {% if article.img_url %}
+        <p><img alt="title image" src="{{article.img_url}}" style="width: 100%;"></p>
+        {% endif %}
+      <footer class="post-info">
+        <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+        <span class="vcard author">von
+          {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}" title="Alle Artikel von Autor:in anzeigen.">{{ author }}</a>
+          {% endfor %}
+        </span>
+      </footer><!-- /.post-info -->
+      <div class="entry-content"> {{ article.xsummary }}</div>
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Artikel lesen: &quot;{{ article.title }}&quot;"> (Artikel lesen) </a><!-- /.entry-content -->
+    </article>
+    <hr class="hr_gradient">&nbsp;
+    </li>
+    {% endfor %}
+  </ol><!-- /#posts-list -->
+  {% if articles_page.has_other_pages() %}
+  {% include 'pagination.html' %}
+{% endif %}
+</section>
+{% endblock %}

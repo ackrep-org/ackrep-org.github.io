@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{# Note that it is expected that in this pelican instance there no articles will be rendered for publication #}
+
+{% block richpreview %}
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{ article.title }}">
+<meta name="description" content="{{ article.xsummary }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta property="og:title" content="{{ article.title }}">
+<meta property="og:description" content="{{ article.xsummary }}">
+<meta property="og:image" content="{{article.img_url}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta property="twitter:title" content="{{ article.title }}">
+<meta property="twitter:description" content="{{ article.xsummary }}">
+<meta property="twitter:image" content="{{article.img_url}}">
+{% endblock %}
+
+{% block content %}
+<section id="blogpost">
+  <h1>{{ article.title }}</h1>
+  {% if article.img_url %}
+  <p><img alt="title image" src="{{article.img_url}}" style="width: 100%;"></p>
+  {% endif %}
+  <footer class="post-info">
+        <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+        <span class="vcard author">von
+          {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}" title="Alle Artikel von Autor:in anzeigen.">{{ author }}</a>
+          {% endfor %}
+        </span>
+ </footer>
+  {{ article.content }}
+</section>
+{% endblock %}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/plq.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" sizes="16x16">
+    <link rel="profile" href="http://microformats.org/profile/hcalendar">
+    <link rel="profile" href="http://microformats.org/profile/hcard">
+    {% endblock %}
+    {% block richpreview %}
+    {% endblock %}
+  </head>
+<body>
+    {% if IS_STAGING | default(False) %}
+    <div class="staging-warning">
+        ACHTUNG: Dies ist nicht unsere offizielle Website, sondern
+        unsere Testumgebung!  Unsere offizelle Website ist
+        unter <a href="{{ SITEURL }}/index.html">plq.de</a>
+        zu finden.
+    </div>
+    {% endif %}
+
+        {# <div class="staging-warning"> ACHTUNG: Dies ist nicht die offizielle Website, sondern eine vorab        im kleinen Kreis veröffentlichte Design-Studie     </div> #}
+
+    <header id="banner">
+        <div id="banner-container">
+            <ul id="mobile-navigation" class="navigation">
+                    <li class="nav-icon facebook-blue"><a href="index.html#soziale-netzwerke">
+                    <i class="fa fa-lg logo-facebook l-svg" title="Unsere Facebook-Seite">&nbsp;</i>
+                    </a></li><li class="nav-icon turquoise"><a href="https://twitter.com/plqde">
+                    <i class="fa fa-lg logo-twitter l-svg" title="Unser Twitter-Account">&nbsp;</i>
+                    </a></li><li class="nav-icon turquoise"><a href="https://joindiaspora.com/u/plq">
+                    <i class="fa fa-lg logo-diaspora l-svg" title="Unser Diaspora-Account">&nbsp;</i>
+                    </a></li><li class="nav-icon turquoise">
+                    <a href="#mail">
+                    <i class="fa fa-lg logo-envelope l-svg" title="Kontakt per E-Mail aufnehmen">&nbsp;</i>
+                    </a></li>
+            </ul>
+        </div>
+{#                    <a href="mailto:kontakt{ät}plq*de"> #}
+    </header>
+    <nav>
+        <div id="navigation-area">
+            <ul id="navigation" class="navigation">
+            <li class="turquoise"><a href="{{ SITEURL }}/index.html#idee">Idee</a></li>
+            <li class="turquoise"><a href="{{ SITEURL }}/index.html#unterstuetzen">Unterstützen</a></li>
+            <li class="turquoise"><a href="{{ SITEURL }}/index.html#mitmachen">Mitmachen</a></li>
+<!--             <li class="turquoise"><a href="{{ SITEURL }}/index.html#ortsgruppen">Ortsgruppen</a></li> -->
+            <li class="turquoise"><a href="{{ SITEURL }}/grundwerte.html">Grundwerte</a></li>
+            <li class="turquoise"><a href="{{ SITEURL }}/blog.html">Blog</a></li>
+            <li class="turquoise"><a href="{{ SITEURL }}/programm.html">Programm</a></li>
+            </ul>
+            <ul id="share-navigation" class="navigation">
+            <li class="nav-icon turquoise"><a href="https://twitter.com/plqde">
+                    <i class="fa fa-lg logo-twitter l-svg" title="Unser Twitter-Account">&nbsp;</i>
+                    <span class="hidden">Twitter</span>
+                </a></li>
+                <li class="nav-icon facebook-blue"><a href="https://www.facebook.com/Partei-f%C3%BCr-Lebensqualit%C3%A4t-1405801329497001">
+                    <i class="fa fa-lg logo-facebook l-svg" title="Unsere Facebook-Seite">&nbsp;</i>
+                    <span class="hidden">Facebook</span>
+                </a><a id="facebook-note" href="index.html#soziale-netzwerke">Bitte beachte auch unsere Position zu Facebook.</a></li><!--
+                -->
+                <li class="nav-icon turquoise"><a href="https://joindiaspora.com/u/plq">
+                    <i class="fa fa-lg logo-diaspora l-svg" title="Unser Diaspora-Account">&nbsp;</i>
+                    <span class="hidden">Diaspora</span>
+                </a></li><!--
+                --><li class="nav-icon turquoise">
+{#                <a href="mailto:kontakt{ät}plq*de"> #}
+                <a href="#mail">
+                    <i class="fa fa-lg logo-envelope l-svg" title="Kontakt per E-Mail aufnehmen">&nbsp;</i>
+                    <span class="hidden">E-Mail</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="content-container" class="nopadding">{% block content %}<strong>Fill the "content" block!</strong>{% endblock %}
+    </div>
+    <footer class="legal-links">
+    <div id="navigation-area">
+        <ul class="navigation">
+            <li class="turquoise"><a href="./impressum.html">Impressum/Datenschutz</a></li>
+            <li class="turquoise legal-links-small"><a target="_blank" title="Das Foto im Kopf der Webseite stammt von der schwedischen Fotografin Erica Gilbertson. Titel: 'Summer is comming up!'" href="http://www.ericagilbertson.com">Header-Foto von<br>Erica Gilbertson</a></li>
+        </ul>
+    </div>
+    </footer>
+</body>
+</html>
