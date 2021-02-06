@@ -3,6 +3,9 @@
 This repo contains the sources (markdown-content, themes, download files), and the built result of the ackrep landing page.
 
 
+The rendered page is available at: <https://ackrep-org.github.io> and <http://ackrep.org> (https certificate yet in progress).
+
+
 ## How to built
 
 ### Preparation
