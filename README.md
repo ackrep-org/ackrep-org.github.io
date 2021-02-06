@@ -1,6 +1,6 @@
 # General information
 
-This repo contains the sources (markdown-content, themes, download files), and the built result of the ackrep landing page.
+This repo contains the sources (markdown-content, themes, download files) and the built result of the ackrep landing page.
 
 
 The rendered page is available at: <https://ackrep-org.github.io> and <https://ackrep.org>.
