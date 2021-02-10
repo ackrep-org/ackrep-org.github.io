@@ -15,7 +15,7 @@ Basically, ACKREP is motivated to **facilitate knowledge transfer** both
 - within the discipline of automatic control (i.e. within subdisciplines), as well as
 - with areas of potential application (e.g. mechanical engineering, chemical process engineering, etc.).
 
-How to best achieve theses goals is an open question and subject to ongoing research.
+How best to achieve these goals is an open question and subject to ongoing research.
 
 
 # Subprojects
@@ -24,7 +24,7 @@ How to best achieve theses goals is an open question and subject to ongoing rese
 
 ## ACKREP Code
 
-Large part of control knowledge is of algorithmic type and is available as executable code, e.g. feedback design, trajectory planning, observability checking etc. However, often this code is not published or at least hard to execute on different environments. This clearly hinders **reproducibility** and thus knowledge transfer. Therefore in [1.1] we propose *ACKREP Code* (originally just named "ACKRep"): A git repository which holds control-related code in a special structure (*problems*, *solutions*, *methods*, *environment specifications*, ...) plus a webservice which checks the solution-entities against the problem-entities, i.e. a specialized continuous integration service.
+Large parts of control knowledge are comprised of algorithms and are available as executable code, e.g. feedback design, trajectory planning, observability checking etc. However, often this code is not published or at least hard to execute on different environments. This clearly hinders **reproducibility** and thus knowledge transfer. In [1.1] we therefore propose *ACKREP Code* (originally just named "ACKRep"): A Git repository which holds control-related code in a special structure (*problems*, *solutions*, *methods*, *environment specifications*, ...) plus a webservice which checks the solution-entities against the problem-entities, i.e. a specialized continuous integration service.
 
 References:
 
@@ -35,18 +35,18 @@ References:
 
 
 
-## Method Net
+## Methodnet
 
-In [2.1] we propose the *Method Net*, a supplement to classical knowledge representation, consisting of types and methods in a graph structure.
+In [2.1] we propose the *Methodnet*, a supplement to classical knowledge representation, consisting of types and methods in a graph structure.
 From that, a schematic solution procedure can be generated for a specific problem.
 "Trajectory tracking control for a triple pendulum" is used to demonstrate how the proposed method supports knowledge transfer.
-Furthermore, an OWL-**ontology** is automatically generated from the methodnet which allows to access this knowledge base with **SPARQL** and other semantic methods.
+Furthermore, an OWL-**ontology** is automatically generated from the methodnet which allows accessing this knowledge base with **SPARQL** and other semantic methods.
 
-Note: Currently information about this project is only available in German.
+Note: Currently, information about this project is only available in German.
 
 References:
 
-- [2.1] Robert Heedt, Carsten Knoll, Klaus Röbenack: *„Formal Semantic Representation of Methods in Automatic Control“*, Submitted to VDI Mechatronik-Tagung, 2021, (German). [Fulltext of Preprint](downloads/2021_Heed_Knoll_Roebenack__VDI_Mechatronik__Formale_semantische_Repraesentation_regelungstechnischer_Methoden_preprint.pdf)
+- [2.1] Robert Heedt, Carsten Knoll, Klaus Röbenack: *„Formal Semantic Representation of Methods in Automatic Control“*, Submitted to VDI Mechatronik-Tagung, 2021, (German). [Fulltext of Preprint](downloads/2021_Heedt_Knoll_Roebenack__VDI_Mechatronik__Formale_semantische_Repraesentation_regelungstechnischer_Methoden__preprint.pdf)
 - [2.2] Demo instance: <https://methodnet.ackrep.org>
 
 

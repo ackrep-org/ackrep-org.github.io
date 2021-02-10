@@ -6,7 +6,7 @@ This repo contains the sources (markdown-content, themes, download files) and th
 The rendered page is available at: <https://ackrep-org.github.io> and <https://ackrep.org>.
 
 
-## How to built
+## How to build
 
 ### Preparation
 
@@ -17,7 +17,7 @@ The rendered page is available at: <https://ackrep-org.github.io> and <https://a
 
 ### Local testing:
 
-- `pelican -lr` # starts a local webserver and makes pelican to regenerate after changes in content or templates
+- `pelican -lr` # starts a local webserver and makes pelican regenerate built files after changes in content or templates
 
 ### Building for publication
 
