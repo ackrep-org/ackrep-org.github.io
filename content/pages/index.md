@@ -6,11 +6,11 @@ save_as: index.html
 
 # Overview
 
-Traditionally, human knowledge is represented mainly in form of written natural language, symbolic formulas and pictures. The project `ACKREP` aims to supplement these representation forms with additional formal (i.e. machine interpretable) representations. The scope of this project is *control theory* and *control engineering* (subsumed under "automatic control").
+Traditionally, human knowledge is represented mainly in form of written natural language, symbolic formulas and pictures. The project **ACKREP** aims to supplement these representation forms with additional formal (i.e. machine interpretable) representations. The scope of this project is *control theory* and *control engineering* (subsumed under "automatic control").
 
 This discipline is characterized by a wide range of application fields from different physical domains and by a heterogeneous methodical landscape from different areas of mathematics, engineering and computer science.
 
-Basically, ACKREP is motivated to **facilitate knowledge transfer** both
+Basically, the motivation for ACKREP is to **facilitate knowledge transfer** both
 
 - within the discipline of automatic control (i.e. within subdisciplines), as well as
 - with areas of potential application (e.g. mechanical engineering, chemical process engineering, etc.).
