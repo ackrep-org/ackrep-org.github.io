@@ -24,9 +24,10 @@ The rendered page is available at: <https://ackrep-org.github.io> and <https://a
 - Commit your changes to the content and theme (but not yet the the content of `doc`).
 - Run `make publish`
 - Ensure that you are on the default branch of the repo (i.e. `main`).
-- `git add doc/`
+- `git add docs/`
 - `git commit -m "publication"`
 - `git push origin`
+    - As convenient oneliner: `git add docs/; git commit -m "publication"; git push origin`
 
 
 # Relevant docs:
