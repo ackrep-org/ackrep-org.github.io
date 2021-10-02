@@ -31,19 +31,22 @@
 <li>within the discipline of automatic control (i.e. within subdisciplines), as well as</li>
 <li>with areas of potential application (e.g. mechanical engineering, chemical process engineering, etc.).</li>
 </ul>
-<p>How best to achieve these goals is an open question and subject to ongoing research.</p>
+<p>How best to achieve these goals is an open question and subject to ongoing research. More specifically, <em>ACKREP Code</em> constitutes a repository of control-related problems and solutions (represented as executable code). The <em>Methodnet</em> is a more abstract formal representation of control-theoretic methods which can be applied to a concrete setting by linking them via a path-finding algorithm.</p>
+<p>This research is carried out at the <a href="http://www.et.tu-dresden.de/rst/">Institute of Control Theory, TU Dresden</a>.</p>
 <h1 id="subprojects">Subprojects</h1>
 <p><strong>Important notice:</strong> Our current attempts of formal knowledge representation are still very experimental. We highly encourage anybody interested in this topic to contact the <a href="#team">ackrep-team</a> with questions, feedback and/or contribution ideas.</p>
-<h2 id="ackrep-code">ACKREP Code</h2>
+<h2 id="ackrep-code"><em>ACKREP Code</em></h2>
 <p>Large parts of control knowledge are comprised of algorithms and are available as executable code, e.g. feedback design, trajectory planning, observability checking etc. However, often this code is not published or at least hard to execute on different environments. This clearly hinders <strong>reproducibility</strong> and thus knowledge transfer. In [1.1] we therefore propose <em>ACKREP Code</em> (originally just named "ACKRep"): A Git repository which holds control-related code in a special structure (<em>problems</em>, <em>solutions</em>, <em>methods</em>, <em>environment specifications</em>, ...) plus a webservice which checks the solution-entities against the problem-entities, i.e. a specialized continuous integration service.</p>
 <p>References:</p>
 <ul>
 <li>[1.1] Carsten Knoll und Robert Heedt: <em>„‚Automatic Control Knowledge Repository‘ – A Computational Approach for Simpler and More Robust Reproducibility of Results in Control Theory“</em>. In:
 24th International Conference on System Theory, Control and Computing (ICSTCC). 2020, P. 130–136. <a href="downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__preprint.pdf">Fulltext of Preprint</a></li>
 <li>[1.2] Conference Presentation: <a href="img/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__summary.png">One-Page-Summary</a> | <a href="downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__slides.pdf">PDF-Slides</a> | <a href="downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__talk-video.mp4">Video</a></li>
-<li>[1.3] Demo instance: <a href="https://testing.ackrep.org">https://testing.ackrep.org</a></li>
+<li>[1.3] Carsten Knoll und Robert Heedt: *Tool-based Support for the FAIR Principles for Control Theoretic Results: The “Automatic Control Knowledge Repository”
+*</li>
+<li>[1.4] Demo instance: <a href="https://testing.ackrep.org">https://testing.ackrep.org</a></li>
 </ul>
-<h2 id="methodnet">Methodnet</h2>
+<h2 id="methodnet"><em>Methodnet</em></h2>
 <p>In [2.1] we propose the <em>Methodnet</em>, a supplement to classical knowledge representation, consisting of types and methods in a graph structure.
 From that, a schematic solution procedure can be generated for a specific problem.
 "Trajectory tracking control for a triple pendulum" is used to demonstrate how the proposed method supports knowledge transfer.
@@ -79,7 +82,7 @@ Furthermore, an OWL-<strong>ontology</strong> is automatically generated from th
 <div class="box_base box_footer">
 
     <div class="box_footer_text modest_links">
-    This web site was automatically generated with  <a href="https://getpelican.com/">Pelican</a> on 2021-02-14 09:53:25 (UTC).
+    This web site was automatically generated with  <a href="https://getpelican.com/">Pelican</a> on 2021-10-02 18:50:44 (UTC).
 
     </div>
 
