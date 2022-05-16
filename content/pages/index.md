@@ -33,8 +33,8 @@ References:
 - [1.1] Carsten Knoll und Robert Heedt: *„‚Automatic Control Knowledge Repository‘ – A Computational Approach for Simpler and More Robust Reproducibility of Results in Control Theory“*. In:
 24th International Conference on System Theory, Control and Computing (ICSTCC). 2020, P. 130–136. [Fulltext of Preprint](downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__preprint.pdf)
 - [1.2] Conference Presentation: [One-Page-Summary](img/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__summary.png) | [PDF-Slides](downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__slides.pdf) | [Video](downloads/2020_Knoll_Heedt__ICSTCC__Automatic_Control_Knowledge_Repository__talk-video.mp4)
-- [1.3] Carsten Knoll und Robert Heedt: *Tool-based Support for the FAIR Principles for Control Theoretic Results: The “Automatic Control Knowledge Repository”
-*
+- [1.3] Carsten Knoll und Robert Heedt: *Tool-based Support for the FAIR Principles for Control Theoretic Results: The “Automatic Control Knowledge Repository”* [Fulltext of Preprint](downloads/2021_Knoll_Heedt__STCCJ__FAIR_Principles_Automatic_Control_Knowledge_Repository__preprint.pdf)
+
 - [1.4] Demo instance: <https://testing.ackrep.org>
 
 
@@ -57,4 +57,6 @@ References:
 # Team
 
 - [Carsten Knoll](https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/carsten-knoll)
+- [Julius Fiedler](https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/)
+- [Anne Harloff](https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/)
 - [Robert Heedt](https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/robert-heedt)
