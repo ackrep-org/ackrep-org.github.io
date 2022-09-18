@@ -4,6 +4,15 @@ Author: PLQ Dresden
 save_as: index.html
 
 
+
+# Update 2022-09-19:
+
+- Demo instance: <https://testing2.ackrep.org>
+- Repositories:
+    - [Emergent Representation of Knowledge (ERK)](https://github.com/ackrep-org/pyerk-core)
+    - [Ontology of Control Systems Engineering (OCSE)](https://github.com/ackrep-org/erk-data-control-theory)
+
+
 # Overview
 
 Traditionally, human knowledge is represented mainly in form of written natural language, symbolic formulas and pictures. The project **ACKREP** aims to supplement these representation forms with additional formal (i.e. machine interpretable) representations. The scope of this project is *control theory* and *control engineering* (subsumed under "automatic control").
