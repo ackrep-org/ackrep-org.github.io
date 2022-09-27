@@ -31,6 +31,7 @@
 <li><a href="https://github.com/ackrep-org/erk-data-control-theory">Ontology of Control Systems Engineering (OCSE)</a></li>
 </ul>
 </li>
+<li>Shared directory with paper preprints and conference slides: <a href="https://cloudstore.zih.tu-dresden.de/index.php/s/SYcxxtAb38NKYpB">https://cloudstore.zih.tu-dresden.de/...</a></li>
 </ul>
 <h1 id="overview">Overview</h1>
 <p>Traditionally, human knowledge is represented mainly in form of written natural language, symbolic formulas and pictures. The project <strong>ACKREP</strong> aims to supplement these representation forms with additional formal (i.e. machine interpretable) representations. The scope of this project is <em>control theory</em> and <em>control engineering</em> (subsumed under "automatic control").</p>
@@ -44,8 +45,8 @@
 <p>This research is carried out at the <a href="http://www.et.tu-dresden.de/rst/">Institute of Control Theory, TU Dresden</a>.</p>
 <h1 id="subprojects">Subprojects</h1>
 <p><strong>Important notice:</strong> Our current attempts of formal knowledge representation are still very experimental. We highly encourage anybody interested in this topic to contact the <a href="#team">ackrep-team</a> with questions, feedback and/or contribution ideas.</p>
-<h2 id="ackrep-code"><em>ACKREP Code</em></h2>
-<p>Large parts of control knowledge are comprised of algorithms and are available as executable code, e.g. feedback design, trajectory planning, observability checking etc. However, often this code is not published or at least hard to execute on different environments. This clearly hinders <strong>reproducibility</strong> and thus knowledge transfer. In [1.1] we therefore propose <em>ACKREP Code</em> (originally just named "ACKRep"): A Git repository which holds control-related code in a special structure (<em>problems</em>, <em>solutions</em>, <em>methods</em>, <em>environment specifications</em>, ...) plus a webservice which checks the solution-entities against the problem-entities, i.e. a specialized continuous integration service.</p>
+<h2 id="ackrep-core"><em>ACKREP Core</em></h2>
+<p>Large parts of control knowledge are comprised of algorithms and are available as executable code, e.g. feedback design, trajectory planning, observability checking etc. However, often this code is not published or at least hard to execute on different environments. This clearly hinders <strong>reproducibility</strong> and thus knowledge transfer. In [1.1] we therefore propose <em>ACKREP Core</em> (originally just named "ACKRep"): A Git repository which holds control-related code in a special structure (<em>models</em>, <em>problems</em>, <em>solutions</em>, <em>methods</em>, <em>environment specifications</em>, ...) plus a webservice which facilitates access to those entities e.g. via a <strong>semantic search interface</strong> and which incorporates latest results from an associated continuous integration service. The latter is used to regularlyf check the integrity of all entities along with their dependencies.</p>
 <p>References:</p>
 <ul>
 <li>[1.1] Carsten Knoll und Robert Heedt: <em>„‚Automatic Control Knowledge Repository‘ – A Computational Approach for Simpler and More Robust Reproducibility of Results in Control Theory“</em>. In:
@@ -55,7 +56,7 @@
 <p>[1.3] Carsten Knoll und Robert Heedt: <em>Tool-based Support for the FAIR Principles for Control Theoretic Results: The “Automatic Control Knowledge Repository”</em> <a href="downloads/2021_Knoll_Heedt__STCCJ__FAIR_Principles_Automatic_Control_Knowledge_Repository__preprint.pdf">Fulltext of Preprint</a></p>
 </li>
 <li>
-<p>[1.4] Demo instance: <a href="https://testing.ackrep.org">https://testing.ackrep.org</a></p>
+<p>[1.4] (Old) Demo instance: <a href="https://testing.ackrep.org">https://testing.ackrep.org</a></p>
 </li>
 </ul>
 <h2 id="methodnet"><em>Methodnet</em></h2>
@@ -63,17 +64,36 @@
 From that, a schematic solution procedure can be generated for a specific problem.
 "Trajectory tracking control for a triple pendulum" is used to demonstrate how the proposed method supports knowledge transfer.
 Furthermore, an OWL-<strong>ontology</strong> is automatically generated from the methodnet which allows accessing this knowledge base with <strong>SPARQL</strong> and other semantic methods.</p>
-<p>Note: Currently, information about this project is only available in German.</p>
+<p>Note: Currently, the development on this project is paused and information about it is yet only available in German.</p>
 <p>References:</p>
 <ul>
 <li>[2.1] Robert Heedt, Carsten Knoll, Klaus Röbenack: <em>„Formal Semantic Representation of Methods in Automatic Control“</em>, Submitted to VDI Mechatronik-Tagung, 2021, (German). <a href="downloads/2021_Heedt_Knoll_Roebenack__VDI_Mechatronik__Formale_semantische_Repraesentation_regelungstechnischer_Methoden__preprint.pdf">Fulltext of Preprint</a></li>
 <li>[2.2] Demo instance: <a href="https://methodnet.ackrep.org">https://methodnet.ackrep.org</a></li>
 </ul>
+<h2 id="ontology-of-control-systems-engineering-ocse"><em>Ontology of Control Systems Engineering (OCSE)</em></h2>
+<p>The entities represented in ACKREP Core should be findable via a <strong>semantic search interface</strong> (e.g. SPARQL). This implies the availability of a suited vocabulary to formulate those semantic queries. Thus the OCSE is co-developed along with ACKREP but probably will have use cases on its own. To be free from the limited expressive power of OWL this ontology is initially formulated in ERK-framework (see below) but with RDF export already implemented and OWL export in consideration.</p>
+<p><strong>Repos:</strong></p>
+<ul>
+<li><a href="https://github.com/ackrep-org/erk-data-control-theory">Ontology of Control Systems Engineering (OCSE) 0.2</a></li>
+<li><a href="https://github.com/cknoll/ocse/">OCSE 0.1</a> (deprecated)</li>
+</ul>
+<h2 id="emergent-representation-of-knowledge-erk"><em>Emergent Representation of Knowledge (ERK)</em></h2>
+<p>Usually, <em>declarative</em> languages are used for knowledge representation, such as RDF, OWL (in various syntax variants), json, yaml, etc. However, in the context of the development of the OCSE a more flexible approach is adopted: knowledge is represented <em>imperatively</em>, i.e. directly as function calls in executable code. This bears the advantage that new (experimental) functionality can be implemented directly as part of the knowledge graph without the need of adapting the declarative syntax and the respective parser. The resulting imperative framework is called <em>Emergent Representation of Knowledge (ERK)</em> and supports SPARQL search (via) RDF-Export and rule based reasoning, where the rules are expressed as "usual" ERK entities.</p>
+<p>Apart from semantic rules ERK also allows to express the content of mathematical theorems, definitions, conjectures etc. Note, however, that this approach is still in early development, and that the current focus is on expressive power at the cost of e.g. computational complexity and performance.</p>
+<p><strong>Repos</strong>:</p>
+<ul>
+<li><a href="https://github.com/ackrep-org/pyerk-core">Emergent Representation of Knowledge (ERK)</a></li>
+<li><a href="https://github.com/ackrep-org/erk-data-control-theory">Ontology of Control Systems Engineering (OCSE) 0.2</a> (formulated in ERK)</li>
+</ul>
 <h1 id="team">Team</h1>
+<p><strong>Active members:</strong></p>
 <ul>
 <li><a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/carsten-knoll">Carsten Knoll</a></li>
 <li><a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/">Julius Fiedler</a></li>
 <li><a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/">Anne Harloff</a></li>
+</ul>
+<p><strong>Former members:</strong></p>
+<ul>
 <li><a href="https://tu-dresden.de/ing/elektrotechnik/rst/das-institut/beschaeftigte/robert-heedt">Robert Heedt</a></li>
 </ul>
 <!-- /block content-->
@@ -96,7 +116,7 @@ Furthermore, an OWL-<strong>ontology</strong> is automatically generated from th
 <div class="box_base box_footer">
 
     <div class="box_footer_text modest_links">
-    This web site was automatically generated with  <a href="https://getpelican.com/">Pelican</a> on 2022-09-18 22:35:10 (UTC).
+    This web site was automatically generated with  <a href="https://getpelican.com/">Pelican</a> on 2022-09-27 18:02:54 (UTC).
 
     </div>
 
