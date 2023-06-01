@@ -5,14 +5,22 @@ save_as: index.html
 
 
 
-# Update 2022-09-19:
+# Update 2023-06-01:
 
-- Demo instance: <https://testing2.ackrep.org>
+- Demo instances:
+    - main: <https://testing.ackrep.org> (**including catalogue of system models**)
+    - fallback: <https://testing2.ackrep.org>
 - Repositories:
+    - [ACKREP data](https://github.com/ackrep-org/ackrep_data) (system models, implemented control design algorithms, ...)
     - [Emergent Representation of Knowledge (ERK)](https://github.com/ackrep-org/pyerk-core)
     - [Ontology of Control Systems Engineering (OCSE)](https://github.com/ackrep-org/erk-data-control-theory)
 - Shared directory with paper preprints and conference slides: [https://cloudstore.zih.tu-dresden.de/...](https://cloudstore.zih.tu-dresden.de/index.php/s/SYcxxtAb38NKYpB)
 
+<br>
+
+---
+
+<br>
 
 # Overview
 
